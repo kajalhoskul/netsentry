@@ -1,0 +1,42 @@
+{
+  "host": "127.0.0.1",
+  "scanned_at": "2026-07-19T16:33:58.607547+00:00",
+  "open_ports": 2,
+  "total_findings": 3,
+  "results": [
+    {
+      "port": 9021,
+      "service": "vsftpd",
+      "version": "2.3.4",
+      "banner": "220 (vsftpd 2.3.4)",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2011-2523",
+          "severity": "CRITICAL",
+          "description": "Backdoored source (smiley-face backdoor) gives remote shell.",
+          "matched_constraint": "==2.3.4"
+        }
+      ]
+    },
+    {
+      "port": 9022,
+      "service": "OpenSSH",
+      "version": "6.6",
+      "banner": "SSH-2.0-OpenSSH_6.6",
+      "vulnerabilities": [
+        {
+          "cve": "CVE-2016-10009",
+          "severity": "HIGH",
+          "description": "Untrusted search path / agent socket bugs in older OpenSSH.",
+          "matched_constraint": "<7.4"
+        },
+        {
+          "cve": "CVE-2015-5600",
+          "severity": "MEDIUM",
+          "description": "Weak keyboard-interactive auth allows brute-force amplification.",
+          "matched_constraint": "<6.7"
+        }
+      ]
+    }
+  ]
+}
